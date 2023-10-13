@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(238,86,212);
+    background: radial-gradient(circle, rgba(238,86,212,1) 0%, rgba(74,200,224,1) 100%); 
+    font-family: Arial, sans-serif;
+    caret-color: transparent;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.message {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#result-screen button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result-screen button:hover {
+    background-color: #555;
+}
+
+.game {
+    text-align: center;
+    background-color: #fff;
+    border: 2px  radial-gradient(circle, rgba(238,86,212,1) 0%, rgba(74,200,224,1) 100%); 
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+#reset {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, rgba(238,86,212,1) 0%, rgba(74,200,224,1) 100%); 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background: linear-gradient(to bottom right,rgba(74,200,224,1) 0%, rgba(238,86,212,1)100%); 
+}
